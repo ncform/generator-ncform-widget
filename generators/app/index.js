@@ -41,8 +41,8 @@ module.exports = class extends Generator {
   promptForFolder() {
     const prompt = {
       name: 'name',
-      message: 'What would you like to call your application?',
-      default: 'demo-project'
+      message: 'What would you like to call your ncform widget?',
+      default: 'nc-demo'
     };
 
     return this.prompt(prompt).then(props => {
@@ -79,13 +79,13 @@ module.exports = class extends Generator {
     const prompts = [
       {
         name: 'appDescription',
-        message: 'How would you describe your application?',
+        message: 'How would you describe your ncform widget?',
         default: ''
       },
       {
         name: 'appKeywords',
-        message: 'How would you describe your application in comma seperated keywords?',
-        default: ''
+        message: 'How would you describe your ncform widget in comma seperated keywords?',
+        default: 'ncform,widget'
       },
       {
         name: 'appAuthor',
@@ -127,6 +127,9 @@ module.exports = class extends Generator {
       {
         // 'Daniel Panel': this.props.titleAppName,
         // '\\[author name\\]': this.props.appAuthor,
+        'nc-demo': this.props.slugifiedAppName,
+        '@ncform/ncform-widget-seed': this.props.slugifiedAppName,
+        'NcDemo': this.props.firstCapCamelAppName,
       },
       ['node_modules/**']
     );
@@ -159,11 +162,11 @@ module.exports = class extends Generator {
       callback() {
         logger.log('');
         logger.green('------------------------------------------');
-        logger.green('Your application project is ready!');
+        logger.green('Your ncform widget project is ready!');
         logger.log('');
         logger.green('To Get Started, run the following command:');
         logger.log('');
-        logger.yellow('cd ' + this.props.name + ' && npm run dev'); // TODO 根据实际情况进行修改
+        logger.yellow('cd ' + this.props.name + ' && npm run serve');
         logger.log('');
         logger.green('Happy Hacking!');
         logger.green('------------------------------------------');
