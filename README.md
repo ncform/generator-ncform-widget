@@ -1,4 +1,4 @@
-# generator-ncform-widget [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# generator-ncform-widget [![NPM version][npm-image]][npm-url]
 > ncform widget project generator
 
 ## Installation
