@@ -130,6 +130,7 @@ module.exports = class extends Generator {
         'nc-demo': this.props.slugifiedAppName,
         '@ncform/ncform-widget-seed': this.props.slugifiedAppName,
         'NcDemo': this.props.firstCapCamelAppName,
+        'ncDemo': this.props.camelAppName
       },
       ['node_modules/**']
     );
